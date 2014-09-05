@@ -21,18 +21,19 @@ section h4{margin:14px 0;}
 #plus{background:#ececec;line-height:100px;padding-top:30px;}
 #plus a{line-height:1.3em;color:#a3a3a3;}
 .scale{transform:scale(1.2);-webkit-transform:scale(1.2);-moz-transform:scale(1.2);-o-transform:scale(1.2);-ms-transform:scale(1.2);}
-.transition{transition:all .3s linear;-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-o-transition:all .3s linear;-ms-transform:scale(1.2);}
+.transition{transition:all .1s linear;-webkit-transition:all .1s linear;-moz-transition:all .1s linear;-o-transition:all .1s linear;-ms-transition:all .1s linear;}
 span.edit{background:url(../images/edit.png) no-repeat;background-size:12px auto;right:24px;}
 span.del{background:url(../images/delete.png) no-repeat;background-size:12px auto;right: 8px;}
 /*******step three***********/
 .step-three section{float:left;}
-.step-three section.left{width:30%;}
-.step-three section.right{width:70%;}
+.step-three section.left{width:275px;border-right:2px solid #ddd;position:absolute;}
+.step-three section.right{width:100%;padding-left:315px;}
 .step-three section>div{padding:1em 0;position:relative;}
-.step-three section.left>div{border-right:2px solid #ddd;margin-right:20px;}
+.step-three section.left>div{margin-right:20px;}
 .step-three section.right>div{margin-left:40px;}
+#keyword{width:100%;}
 .fullinput{position:relative;}
-.step-three #keyword+label{background: #00a0e9;color: #fff;content: "+";display: inline-block;width: 36px;height: 36px;text-align:center;line-height: 36px;position: absolute;right: 20px;font-size: 2em;}
+.step-three #keyword+label{background: #00a0e9;color: #fff;content: "+";display: inline-block;width: 36px;height: 36px;text-align:center;line-height: 36px;position: absolute;right: 0;top:0;font-size: 2em;}
 #labels label,#rec-labels label{display:inline-block;background: #eee;color: #666;padding: 7px 26px 7px 10px;margin:0 4px 8px 0;position: relative;cursor:pointer;}
 #rec-labels label:hover{background:#00a0e9;color:#fff;}
 #labels label span,#rec-labels label span{position: absolute;right: 8px;}

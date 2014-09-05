@@ -24,11 +24,14 @@
 	delCur();
 	//添加主语词
 	function selCur(){
+		
 		$('.word-sec li a').has('span').click(function(e){
-			e.preventDefault();
+			e.preventDefault();			
+		}).hover(function(e){
 			var $thisLink = $(this);
-			$thisLink.addClass('scale transition current');
-			$thisLink.parents('li').siblings().find('a').removeClass('current scale');
+			$thisLink.toggleClass('scale transition current');
+			//$thisLink.parents('li').siblings().find('a').removeClass('current scale');
+			delCur();
 		});
 	}
 	//删除主语词
