@@ -27,7 +27,7 @@ span.del{background:url(../images/delete.png) no-repeat;background-size:12px aut
 /*******step three***********/
 .step-three section{float:left;}
 .step-three section.left{width:30%;}
-.step-three section.right{width:70%;font-size:16px;}
+.step-three section.right{width:70%;}
 .step-three section>div{padding:1em 0;position:relative;}
 .step-three section.left>div{border-right:2px solid #ddd;margin-right:20px;}
 .step-three section.right>div{margin-left:40px;}
@@ -35,7 +35,7 @@ span.del{background:url(../images/delete.png) no-repeat;background-size:12px aut
 .step-three #keyword+label{background: #00a0e9;color: #fff;content: "+";display: inline-block;width: 36px;height: 36px;text-align:center;line-height: 36px;position: absolute;right: 20px;font-size: 2em;}
 #labels label,#rec-labels label{display:inline-block;background: #eee;color: #666;padding: 7px 26px 7px 10px;margin:0 4px 8px 0;position: relative;cursor:pointer;}
 #rec-labels label:hover{background:#00a0e9;color:#fff;}
-#labels label span,#rec-labels label span{position: absolute;right: 8px;font-size: 16px;}
+#labels label span,#rec-labels label span{position: absolute;right: 8px;}
 #rec-labels,#labels{margin-bottom:40px;}
 .tieshi{color:#999;line-height:1.5em;}
 .change{color: #999;position: absolute;right: 0;top: 1.5em;border: 1px solid #ddd;font-size: 1.2em;line-height: 1.4em;padding: .3em 1.5em;border-radius: 3px;}
