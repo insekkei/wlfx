@@ -1,71 +1,199 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Wlfx by insekkei</title>
+    <title>网络发现</title>
+    <link rel="shortcut icon" href="/static/images/favicon.png">
+    <link rel="stylesheet" href="css/style.css"/>
+    <!--添加一个css-->
+    <link rel="stylesheet" href="css/hc.css"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/select2.min.js"></script>
+</head>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Wlfx</h1>
-        <p>网络发现</p>
+<body>
 
-        <p class="view"><a href="https://github.com/insekkei/wlfx">View the Project on GitHub <small>insekkei/wlfx</small></a></p>
+<!-- site header -->
+<header class="site-header hidden-print">
+    <div class="container">
+        <h1 class="brand">
+            <a href="/" class="logo">
+                Deepinfo
+            </a>
+        </h1>
 
+        <div class="search-wrapper">
+            <div class="input-filter">
+                <a class="btn btn-primary menu-dropdown">
+                  
+                    主题
+                   
+                  <span class="caret"></span>
+                </a>
+            </div>
+            <a class="btn btn-primary search-button" href="/search">高级搜索</a>
+        </div>
 
-        <ul>
-          <li><a href="https://github.com/insekkei/wlfx/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/insekkei/wlfx/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/insekkei/wlfx">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+        <div class="user">
+            <span class="name">root</span><span class="caret"></span>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+            <!-- overlay -->
+            <ul class="site-overlay per">
+                <li>
+                    <a href="/usersettings">设置</a>
+                </li>
+                <li>
+                    <a href="/accounts/logout/">登出</a>
+                </li>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+            </ul>
+            <!-- end overlay -->
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/insekkei">insekkei</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+        </div>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+</header>
+<!-- site content -->
+<section class="site-content clearfix">
+    <div class="container">
+        
+
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">新建主题</h3>
+        </div>
+	<ul class="pro-bar">
+	    	<li class="current"><span>基本信息</span></li><li><span>搜索目标设置</span></li><li><span>搜索精准调优设置</span></li>
+	</ul>
+        <form action="" method="post" class="card-form" id="add-sub-form">
+ 	    <div class="fullinput">
+                <label>名称</label>
+		<input id="sub-name" class="large-input" type="text" name="sub-name" placeholder="" value=""/>
+            </div>
+            <div class="fullinput">
+                <label>描述</label>
+                <input id="sub-des" class="large-input" type="text" name="sub-des" placeholder="" value=""/>
+	    </div>
+	    <div>
+	    	<label>类别</label>
+		<select data-placeholder=""   name="source">
+                    
+                        <option value=5 >
+                          政府负面
+                        </option>
+                    
+                        <option value=4 >
+                          政府负面
+                        </option>
+                    
+                        <option value=2 >
+                          政府负面
+                        </option>
+                    
+                        <option value=1 >
+                          政府负面
+                        </option>
+                    
+                </select>
+	    </div>
+            <div>
+                <label>来源</label>
+                
+                    <input type="checkbox" class="modern-toggle-button" name="source" value="1" id="si1"
+                           checked/>
+                    <label class="radiolabel blue" for="si1">新闻</label>
+                
+                    <input type="checkbox" class="modern-toggle-button" name="source" value="2" id="si2"
+                           checked/>
+                    <label class="radiolabel blue" for="si2">论坛</label>
+                
+                    <input type="checkbox" class="modern-toggle-button" name="source" value="3" id="si3"
+                           checked/>
+                    <label class="radiolabel blue" for="si3">微博</label>
+                
+                    <input type="checkbox" class="modern-toggle-button" name="source" value="4" id="si4"
+                           checked/>
+                    <label class="radiolabel blue" for="si4">微信</label>
+                
+                    <input type="checkbox" class="modern-toggle-button" name="source" value="5" id="si5"
+                           checked/>
+                    <label class="radiolabel blue" for="si5">博客</label>
+                
+                    <input type="checkbox" class="modern-toggle-button" name="source" value="6" id="si6"
+                           checked/>
+                    <label class="radiolabel blue" for="si6">公告</label>
+                
+                    <input type="checkbox" class="modern-toggle-button" name="source" value="7" id="si7"
+                           checked/>
+                    <label class="radiolabel blue" for="si7">指定地点</label>
+       
+            </div>
+            
+            <div class="submit-row">
+                <input class="btn btn-primary btn-fixed" type="button" id="fir-sub" value="下一步"/>
+            </div>
+
+        </form>
+        <script type="text/javascript">
+            function show_range() {
+                    if ($('#id_time_range_type').val() == 3) {
+                        var html = '<div><span>从</span><input id="id_time_range_from" name="time_range_from" type="date" /></div>';
+                        html += '<div><span>至</span><input id="id_time_range_to" name="time_range_to" type="date" /></div>';
+                        $('#custom_time_range_type').html(html);
+                    } else {
+                        $('#custom_time_range_type').html('');
+                    }
+            }
+            $(document).ready(function () {
+	        //分步--hc添加
+	   	$('#fir-sub').click(function(e){
+			$('#add-sub-form').load('sec-step.html');
+			$('.pro-bar li:first-child').addClass('passed').removeClass('current');
+			$('.pro-bar li:eq(1)').addClass('current');
+		});//分步over
+
+                show_range();
+                $('#id_time_range_type').change(show_range);
+
+                $('#keyword-field').select2({
+                    formatNoMatches: "输入搜索关键词",
+                    tags: [],
+                    tokenSeparators: [",", "，", " "]
+                });
+
+                $('.save-and-search').change(function () {
+                    if ($(this).val() == 0) {
+                        $('#search_title').hide();
+                    } else {
+                        $('#search_title').show();
+                    }
+                });
+
+                $('#search-form').submit(function () {
+                    if ($('[name="save-and-search"]:checked').val() == 1) {
+                        
+                            this.action = "/search/create?do_search=true";
+                        
+                    } else {
+                        this.action = "/search";
+                    }
+                    this.submit();
+                });
+            })
+        </script>
+    </div>
+
+
+    </div>
+</section>
+
+<!-- site footer -->
+<footer class="site-footer"><div class="container footer-inner">
+    <p>Copyright © 2014–2015 Company Name</p>
+</div></footer>
+
+    <script src="https://uis-web.graphxp.com/static/scripts/hc.js"></script>
+
+</body>
+
 </html>

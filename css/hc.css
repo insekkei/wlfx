@@ -1,0 +1,71 @@
+/*
+**hc -2014-09-05
+*/
+/*****progress bar******/
+.pro-bar{margin: 1em 20px;padding: 0;border-top: 3px solid #f3f3f3;position:relative;}
+.pro-bar li{width: 33%;display: inline-block;font-size: 1.15em;padding: 20px 0;border-top:3px solid transparent;position:relative;top:-3px;color:#eee;}
+.pro-bar li span{display:inline-block;width:33%;overflow:visible;height:100%;padding-top:20px;white-space:nowrap;
+position:absolute;top:-3px;left:5px}
+.pro-bar li.current span,.pro-bar li.passed{border-top:3px solid #ccc;color:#333;}
+
+.pro-bar li:before,.pro-bar:after{content: "";display: inline-block;width: 5px;height: 5px;background: #888;border-radius: 3px;position: absolute;top: -4px;}
+.pro-bar:after{right:0;}
+.pro-bar li:last-child:after{content:"完成";position:absolute;right:0;}
+/**********step two***********/
+section h4{margin:14px 0;}
+.word-sec li{width: 100px;height: 100px;background: #47c3fe;float: left;margin-right: 1px;text-align: center;line-height: 100px;font-size: 1.1em;position:relative;}
+.word-sec li a{color:#fff;text-decoration:none;display: block;width: 100%;height: 100%;}
+.word-sec li a span{display:none;}
+.word-sec li a.current{background:#ef4849;position: relative;z-index:100;}
+.word-sec li a.current span{display:inline-block;width:12px;height:12px;position:absolute;top: 8px;z-index:1000;}
+#plus{background:#ececec;line-height:100px;padding-top:30px;}
+#plus a{line-height:1.3em;color:#a3a3a3;}
+.scale{transform:scale(1.2);-webkit-transform:scale(1.2);-moz-transform:scale(1.2);-o-transform:scale(1.2);-ms-transform:scale(1.2);}
+.transition{transition:all .3s linear;-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-o-transition:all .3s linear;-ms-transform:scale(1.2);}
+span.edit{background:url(../images/edit.png) no-repeat;background-size:12px auto;right:24px;}
+span.del{background:url(../images/delete.png) no-repeat;background-size:12px auto;right: 8px;}
+/*******step three***********/
+.step-three section{float:left;}
+.step-three section.left{width:30%;}
+.step-three section.right{width:70%;font-size:16px;}
+.step-three section>div{padding:1em 0;position:relative;}
+.step-three section.left>div{border-right:2px solid #ddd;margin-right:20px;}
+.step-three section.right>div{margin-left:40px;}
+.fullinput{position:relative;}
+.step-three #keyword+label{background: #00a0e9;color: #fff;content: "+";display: inline-block;width: 36px;height: 36px;text-align:center;line-height: 36px;position: absolute;right: 20px;font-size: 2em;}
+#labels label,#rec-labels label{display:inline-block;background: #eee;color: #666;padding: 7px 26px 7px 10px;margin:0 4px 8px 0;position: relative;cursor:pointer;}
+#rec-labels label:hover{background:#00a0e9;color:#fff;}
+#labels label span,#rec-labels label span{position: absolute;right: 8px;font-size: 16px;}
+#rec-labels,#labels{margin-bottom:40px;}
+.tieshi{color:#999;line-height:1.5em;}
+.change{color: #999;position: absolute;right: 0;top: 1.5em;border: 1px solid #ddd;font-size: 1.2em;line-height: 1.4em;padding: .3em 1.5em;border-radius: 3px;}
+.step-three section.right h4{margin:10px 0;}
+.info{margin-top:20px;}
+.info-item{margin-bottom:20px;}
+.info-item>img,.info-item>div{float:left;}
+.info-item>div{margin-left:1em;line-height:1.5em;}
+.info-details p a{color:#09b1ee;text-decoration:none;}
+.time{color:#999;display:inline-block;margin-left:10px;}
+/*评论*/
+.source-url,.com{display:inline-block;float:left;}
+.com-title{cursor:pointer;}
+.com{position: absolute;right: 0;}
+.info-details .caret{border: 6px solid transparent;border-top: 6px solid #aaa;}
+.site-overlay.comment{display:none;position: absolute;right: 65px;margin-top: 30px;border:1px solid #ddd;padding:.5em;line-height:1.5em;background:rgba(255,255,255,.9);}
+.minus:before,.plus:before,.zero:before{content:"";display:inline-block;width:1em;height:1em;border-radius:.5em;margin-right: 10px;position: relative;top: 2px;}
+.minus:before{background:orange;}
+.plus:before{background:red;}
+.zero:before{background:green;}
+a.star{display:inline-block;width:16px;height:15px;margin:0 1px;background:url(../images/star.png) no-repeat;background-size:cover;}
+a.star.active{background:url(../images/star-active.png) no-repeat;}
+
+
+
+
+
+
+
+
+
+
+

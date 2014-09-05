@@ -1,0 +1,148 @@
+<div class="step-three clearfix">
+	<section class="left">
+		<div>
+			<h4>搜索关键词</h4>
+			 <div class="fullinput">
+				<input id="keyword" class="large-input" type="text" name="keyword" placeholder="关键词" value=""/>
+				<label id="add-label">+</label>
+			  </div>
+			  <div id="labels">
+			  	<label>keyword<span>&times;</span></label>
+			  	<label>网速慢<span>&times;</span></label>
+			  	<label>质量差<span>&times;</span></label>
+			  	<label>太平洋保险<span>&times;</span></label>
+			   </div>
+			   <h4>关键词推荐</h4>
+			    <div id="rec-labels">
+			  	<label>推荐关键<span>+</span></label>
+			  	<label>态度恶劣<span>+</span></label>
+			   </div>
+			   <p class="tieshi">贴士：增加关键词可能会降级当前的准确率。需要更多的样本来进行判断</p>
+		</div>
+	</section>
+	<section class="right">
+		<div>
+			<h4>当前准确率<span id="parcent">40%</span></h4>
+			<p>请标注下面信息的相关度</p>
+			<a class="button change" href="#">换一批</a>
+			<div class="info">
+				<!--列表项-->
+				<div class="info-item clearfix">
+					<img src="images/1.png">
+					<div class="info-details clearfix">
+						<p><strong>方片菇</strong> <span class="time">5分钟前</span></p>
+						<p>Google Glass User Pulled Out Of Movie Theater And Accused Of Piracy.</p>
+						<p class="source-url"><a href="">来源：bbcchinese.com</a></p>	
+						<p class="com">
+						    <span class="com-title minus">非常负面</span><span class="caret"></span>
+						    <a class="star transition" href=""></a><a class="star transition" href=""></a><a class="star transition" href=""></a>
+						</p>
+						    <!-- overlay -->
+						    <ul class="site-overlay comment">
+							<li>
+							    <a href="" class="zero">正面</a>
+							</li>
+							<li>
+							    <a href="" class="plus">非常正面</a>
+							</li>
+						    </ul>
+						    <!-- end overlay -->	
+					</div>		
+				</div><!--列表项over-->
+				<!--列表项-->
+				<div class="info-item clearfix">
+					<img src="images/1.png">
+					<div class="info-details">
+						<p><strong>方片菇</strong> <span class="time">5分钟前</span></p>
+						<p>Google Glass User Pulled Out Of Movie Theater And Accused Of Piracy.</p>
+						<p><a href="">来源：bbcchinese.com</a></p>	
+						<p class="com">
+						    <span class="com-title minus">非常负面</span><span class="caret"></span>
+						    <a class="star transition" href=""></a><a class="star transition" href=""></a><a class="star transition" href=""></a>
+						</p>
+						    <!-- overlay -->
+						    <ul class="site-overlay comment">
+							<li>
+							    <a href="" class="zero">正面</a>
+							</li>
+							<li>
+							    <a href="" class="plus">非常正面</a>
+							</li>
+						    </ul>
+						    <!-- end overlay -->
+					</div>		
+				</div><!--列表项over-->
+				<!--列表项-->
+				<div class="info-item clearfix">
+					<img src="images/2.png">
+					<div class="info-details">
+						<p><strong>方片菇</strong> <span class="time">5分钟前</span></p>
+						<p>Google Glass User Pulled Out Of Movie Theater And Accused Of Piracy.</p>
+						<p><a href="">来源：bbcchinese.com</a></p>	
+						<p class="com">
+						    <span class="com-title minus">非常负面</span><span class="caret"></span>
+						    <a class="star transition" href=""></a><a class="star transition" href=""></a><a class="star transition" href=""></a>
+						</p>
+						    <!-- overlay -->
+						    <ul class="site-overlay comment">
+							<li>
+							    <a href="" class="zero">正面</a>
+							</li>
+							<li>
+							    <a href="" class="plus">非常正面</a>
+							</li>
+						    </ul>
+						    <!-- end overlay -->
+					</div>		
+				</div><!--列表项over-->
+			</div>
+		</div>
+	</section>
+	<div class="submit-row">
+		<input class="btn btn-primary btn-fixed" type="submit" id="submit" value="完成"/>
+	</div>
+</div>
+<script>
+	$(document).ready(function(){
+		delLabel();
+		addLabel();
+		//添加label
+		$('#add-label').click(function(e){
+			var val = $('#keyword').val(),
+			    html = '<label>'+val+'<span>&times;</span></label>';
+			if(val.length>0){
+				$('#labels').append(html);
+				delLabel();
+			}
+		});
+		//删除label
+		function delLabel(){
+			$('#labels label span').click(function(e){
+				$(this).parent('label').fadeOut();
+			});
+		}
+		//添加推荐关键词
+		function addLabel(){
+			$('#rec-labels label span').click(function(e){
+				var html = $(this).parent('label').html().replace('+','&times;');
+				html = '<label>'+html+'</label>';
+				$('#labels').append(html);
+				delLabel();
+			});
+		}
+		$('.pro-bar li').addClass('transition');
+		//改变状态
+		$('#submit').click(function(e){
+			$('.pro-bar li:eq(2)').addClass('passed');
+		});
+		//评论
+		$('.info-details .caret,.com-title').click(function(e){
+			$(this).parent('.com').next('.comment').toggle(100);
+		});
+		$('a.star').click(function(e){
+			e.preventDefault();
+			$(this).toggleClass('active');
+		});
+		
+	});
+</script>
